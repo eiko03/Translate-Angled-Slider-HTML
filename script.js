@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function(){
     topLayer.style.width= e.clientX + skew + delta + 'px';
   });
   
-  wrapper.addEventListener('touchmove', function(e){
+  wrapper.addEventListener('touchstart', function(e){
     delta = (e.clientX - window.innerWidth / 2) * 0.5;
   
     handle.style.left = e.clientX + delta + 'px';
