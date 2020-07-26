@@ -18,6 +18,6 @@ document.addEventListener('DOMContentLoaded', function(){
   };
   
   wrapper.addEventListener('mousemove',someFunction,false);
-  wrapper.addEventListener('touchstart',someFunction,false);
+  wrapper.addEventListener('touchmove',someFunction,false);
   
 });
