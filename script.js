@@ -9,20 +9,15 @@ document.addEventListener('DOMContentLoaded', function(){
     skew = 1000;
   }
   
-  wrapper.addEventListener('mousemove'||'touchmove', function(e){
+  var someFunction = function(e){
     delta = (e.clientX - window.innerWidth / 2) * 0.5;
   
     handle.style.left = e.clientX + delta + 'px';
 
     topLayer.style.width= e.clientX + skew + delta + 'px';
-  });
+  };
   
-//   wrapper.addEventListener('touchstart', function(e){
-//     delta = (e.clientX - window.innerWidth / 2) * 0.5;
-  
-//     handle.style.left = e.clientX + delta + 'px';
-
-//     topLayer.style.width= e.clientX + skew + delta + 'px';
-//   });
+  wrapper.addEventListener('mousemove',someFunction,false);
+  wrapper.addEventListener('touchmove',someFunction,false);
   
 });
